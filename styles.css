@@ -445,9 +445,27 @@ h4 {
   grid-template-columns: minmax(180px, 0.55fr) minmax(320px, 1.05fr) minmax(320px, 1.1fr);
 }
 
-.portrait-stack {
+.about-layout {
+  width: min(var(--max-width), 90vw);
+  margin-inline: auto;
   display: grid;
-  gap: 1rem;
+  gap: 2.25rem;
+}
+
+.about-heading {
+  max-width: 920px;
+}
+
+.about-heading h2 {
+  max-width: 100%;
+  overflow-wrap: normal;
+}
+
+.about-profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(420px, 1.28fr);
+  gap: 2.5rem;
+  align-items: start;
 }
 
 .portrait-figure,
@@ -478,6 +496,12 @@ h4 {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+.about-timeline {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem;
+  margin-top: 0;
 }
 
 .copy-block p {
@@ -970,6 +994,8 @@ h4 {
 
   .section-grid,
   .about-grid,
+  .about-profile,
+  .about-timeline,
   .contact-card,
   .collab-grid,
   .research-topic {
